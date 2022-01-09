@@ -23,17 +23,8 @@ app.set("view engine","ejs")
 app.use('/css',express.static(path.resolve(__dirname,"components/css"))) 
 app.use('/js',express.static(path.resolve(__dirname,"components/js" ))) 
 
-app.get('/',(req , res) => {
-    res.render('index');
-})
-
-app.get('/add_user',(req , res) => {
-    res.render('add_user');
-})
-
-app.get('/update_user',(req , res) => {
-    res.render('update_user');
-})
+//load router
+app.use('/',require('./server/routes/routers'))
 
 
 app.listen(PORT , ()=> {console.log(`Server is running on http://localhost:${PORT}`)}) ;
