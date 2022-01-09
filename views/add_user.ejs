@@ -1,0 +1,35 @@
+<!--include temp file header-->
+<%-include('temp-files/_header') %>
+
+
+<!--Main Section-->
+<main id = "main-app">
+    <div class="container">
+        <div class = "nav-box d-flex justify-between">
+           <div class="filter">
+               <a href = "/">
+                   <i class="fas fa-angle-double-left"></i>
+                    ALL USERS
+                </a>
+           </div>
+        </div>
+
+        <div class = "form-title text-center">
+            <h2 class="text-dark">New User</h2>
+            <span class="text-light">Fill to register</span>
+        </div>
+
+        <!--Input Form for users-->
+        <form method="post" id = "add_user">
+    
+            <!--include temp file form-->
+            <%-include('temp-files/_form') %>
+        
+        </form>
+    </div>
+</main>
+
+<!--/Main Section-->
+
+<!--include temp file footer-->
+<%-include('temp-files/_footer') %>

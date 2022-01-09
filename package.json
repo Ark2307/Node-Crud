@@ -1,0 +1,35 @@
+{
+  "name": "node-crud",
+  "version": "1.0.0",
+  "description": "Basic ejs and node crud app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ark2307/Node-Crud.git"
+  },
+  "keywords": [
+    "crud",
+    "node",
+    "mongoDB"
+  ],
+  "author": "Aryan Khandelwal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ark2307/Node-Crud/issues"
+  },
+  "homepage": "https://github.com/Ark2307/Node-Crud#readme",
+  "dependencies": {
+    "axios": "^0.24.0",
+    "body-parser": "^1.19.1",
+    "dotenv": "^10.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.2",
+    "mongoose": "^6.1.5",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.15"
+  }
+}
