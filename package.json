@@ -1,7 +1,7 @@
 {
   "name": "node-crud",
   "version": "1.0.0",
-  "description": "Basic ejs and node crud app",
+  "description": "A CRUD app made from ejs and node and mongoDB. It registers client info with feature of update and delete.",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -12,9 +12,9 @@
     "url": "git+https://github.com/Ark2307/Node-Crud.git"
   },
   "keywords": [
-    "crud",
     "node",
-    "mongoDB"
+    "crud",
+    "mongodb"
   ],
   "author": "Aryan Khandelwal",
   "license": "ISC",
