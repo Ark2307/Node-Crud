@@ -22,7 +22,7 @@ exports.create = (req,res) =>{
     // save the details in database
     user.save(user)
         .then(data =>{
-            res.send(data)
+            res.redirect("/") ;
         })
         .catch(err => {
             res.status(500).send({
@@ -40,7 +40,7 @@ exports.find = (req,res)=>{
         const id = req.query.id ;
         UserDB.findById(id).then(data =>{
             if(!data){
-                res.status(404).send({message: `User not Found`});
+                res.status(404).send({message: `User not Found`})
             }
     
             else{
@@ -66,15 +66,15 @@ exports.find = (req,res)=>{
 exports.update = (req , res) =>{
 
     if(!req.body){
-        res.status(400).send({
+        return res.status(400).send({
             message: "No changes in the data made"
         });
-        return ;
+        
     }
 
     // url parameter
     const id = req.params.id;
-    UserDB.findByIdAndUpdate(id,req.body).then(data =>{
+    UserDB.findByIdAndUpdate(id,req.body, {useFindAndModify : false}).then(data =>{
         if(!data){
             res.status(404).send({message: `User not Found`})
         }
